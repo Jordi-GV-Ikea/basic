@@ -6,7 +6,14 @@ import { server } from "./test/server";
 import { renderWithProviders } from "./test/test-utils.copy";
 
 describe("App with js", () => {
-  it("handles good response", async () => {
+  it('Reecive data from ikea', async () => {
+    renderWithProviders(<App />);
+    screen.getByText("Loading...");
+
+    await screen.findByText('Arrives data');
+  })
+  
+  it.skip("handles good response", async () => {
     renderWithProviders(<App />);
 
     screen.getByText("Loading...");
@@ -23,7 +30,7 @@ describe("App with js", () => {
     );
   });
 
-  it("handles error response", async () => {
+  it.skip("handles error response", async () => {
     // force msw to return error response
     server.use(
       rest.get("https://pokeapi.co/api/v2/pokemon/ivysaur", (req, res, ctx) => {
