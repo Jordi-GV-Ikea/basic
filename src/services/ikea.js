@@ -12,7 +12,7 @@ const urlIkea = "https://isx-customer-services-pages-dppgxr4krq-ey.a.run.app/app
 // Return the response filtered by the current market
 export const topicApi = createApi({
   reducerPath: 'topics',
-  baseQuery: fetchBaseQuery({ baseUrl: baseURL }),
+  baseQuery: fetchBaseQuery({ baseUrl: 'https://isx-customer-services-pages-dppgxr4krq-ey.a.run.app/' }),
   endpoints: (builder) => ({
     getTopic: builder.query({
       query: () => 'app-data?market=netherlands&environment=master',

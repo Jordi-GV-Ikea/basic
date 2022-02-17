@@ -12,7 +12,7 @@ function GetData() {
   return (
     <>
     <h3>Get Data component</h3>
-    { isLoading && <p>Loading...</p>}
+    { isLoading && <p>Loading IKEA</p>}
     { isError && <p>Error</p>}
     { pages && <p>Arrives data</p>}
     <hr/>
@@ -25,7 +25,7 @@ export default function App() {
   return (
     <div className="App">
       <GetData/>
-      {/* <Pokemon/> */}
+      <Pokemon/>
     </div>
   )
 }

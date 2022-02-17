@@ -6,14 +6,14 @@ import { server } from "./test/server";
 import { renderWithProviders } from "./test/test-utils.copy";
 
 describe("App with js", () => {
-  it('Reecive data from ikea', async () => {
+  it.skip('Reecive data from ikea', async () => {
     renderWithProviders(<App />);
-    screen.getByText("Loading...");
+    screen.getByText("Loading IKEA");
 
     await screen.findByText('Arrives data');
   })
   
-  it.skip("handles good response", async () => {
+  it("handles good response", async () => {
     renderWithProviders(<App />);
 
     screen.getByText("Loading...");
