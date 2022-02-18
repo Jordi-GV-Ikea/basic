@@ -5,6 +5,7 @@ const handlers = [
     const query = req.url.searchParams;
     const market = query.get("market");
     const environment = query.get("environment") ; 
+    // TODO fix this configuration
     const mockApiResponse = {
       pages : "https://isx-customer-services-pages-dppgxr4krq-ey.a.run.app/app-data?market=netherlands&environment=master"
     }
