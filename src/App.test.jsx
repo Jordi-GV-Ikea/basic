@@ -6,20 +6,20 @@ import { server } from "./test/server";
 import { renderWithProviders } from "./test/test-utils.copy";
 
 describe("App with js", () => {
-  it.skip('Reecive data from ikea', async () => {
+  it('Reecive data from ikea', async () => {
     renderWithProviders(<App />);
     screen.getByText("Loading IKEA");
 
     await screen.findByText('Arrives data');
   })
   
-  it("handles good response", async () => {
+  it.skip("handles good response for Pokemon", async () => {
     renderWithProviders(<App />);
 
     screen.getByText("Loading...");
 
     await screen.findByText("ivysaur");
-    screen.getByText("pokemon");
+    screen.getByText("Pokemon API");
     
     const img = screen.getByRole("img", {
       name: /ivysaur/i,
@@ -30,7 +30,7 @@ describe("App with js", () => {
     );
   });
 
-  it.skip("handles error response", async () => {
+  it.skip("handles error response for Pokemon", async () => {
     // force msw to return error response
     server.use(
       rest.get("https://pokeapi.co/api/v2/pokemon/ivysaur", (req, res, ctx) => {

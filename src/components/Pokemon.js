@@ -1,4 +1,4 @@
-import { useGetPokemonByNameQuery } from './services/pokemon'
+import { useGetPokemonByNameQuery } from '../services/pokemon'
 
 export default function Pokemon() {
   const { data, error, isLoading } = useGetPokemonByNameQuery('ivysaur')
@@ -11,9 +11,9 @@ export default function Pokemon() {
         <>Loading...</>
       ) : data ? (
         <>
-          <h3>{data.species.name}</h3>
+        <h3>Pokemon API</h3>
+          <h4>{data.species.name}</h4>
           <img src={data.sprites.front_shiny} alt={data.species.name} />
-          <p>pokemon</p>
         </>
       ) : null}
     </>
