@@ -8,7 +8,7 @@ export default function Pokemon() {
       {error ? (
         <>Oh no, there was an error</>
       ) : isLoading ? (
-        <>Loading...</>
+        <>Loading Pokemon...</>
       ) : data ? (
         <>
         <h3>Pokemon API</h3>

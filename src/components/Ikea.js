@@ -11,7 +11,7 @@ function IkeaGetData() {
       <>
       <hr/>
       <h3>IKEA</h3>
-      { isLoading && <p>Loading IKEA</p>}
+      { isLoading && <p>Loading IKEA...</p>}
       { isError && <p>Error</p>}
       { pages && (<>
       <p>Arrives data</p>
