@@ -2,19 +2,21 @@ import { rest } from "msw";
 import { screen, render } from "@testing-library/react";
 
 import App from "./App";
+import Pokemon from "./components/Pokemon";
+import IkeaGetData from "./components/Ikea";
 import { server } from "./test/server";
 import { renderWithProviders } from "./test/test-utils.copy";
 
 describe("App with js", () => {
   it('Reecive data from ikea', async () => {
-    renderWithProviders(<App />);
+    renderWithProviders(<IkeaGetData/>);
     screen.getByText("Loading IKEA");
 
     await screen.findByText('Arrives data');
   })
   
   it.skip("handles good response for Pokemon", async () => {
-    renderWithProviders(<App />);
+    renderWithProviders(<Pokemon/>);
 
     screen.getByText("Loading...");
 
